@@ -16,6 +16,15 @@ class Animal {
 
 }
 
+class SuperPower {
+  use_laser_vision () {
+    console.log("Dor!");
+  }
+
+  be_invisible () {
+    console.log("*puff* (.....invisible....)");
+  }
+}
 
 class Dog extends Animal {
     constructor (args) {
@@ -36,25 +45,13 @@ class Dog extends Animal {
     }
 }
 
-
-
-
-class SuperPower {
-  use_laser_vision () {
-    console.log("Dor!");
+class Chicken extends Animal {
+  constructor (args) {
+    super (args)
+    this.superpower = new SuperPower();
   }
 
-  be_invisible () {
-    console.log("*puff* (.....invisible....)");
-  }
 }
-
-class Chicken extends SuperPower {
-
-}
-
-
-
 
 var dog = new Dog({num_legs: 4, is_warm_blooded: true, name: "bryan"});
 
@@ -63,7 +60,6 @@ console.log(dog.to_s());
 dog.bark();
 console.log(dog.returnName());
 
-
-var chick = new Chicken();
-chick.use_laser_vision();
-chick.be_invisible();
+var chick = new Chicken({num_legs: 2, is_warm_blooded: true});
+chick.superpower.use_laser_vision();
+chick.superpower.be_invisible();
