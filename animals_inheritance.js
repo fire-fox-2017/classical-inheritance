@@ -60,11 +60,12 @@ class SuperPower {
 // Driver code
 let kucing = new Cat('kucing');
 console.log(kucing.name);
-console.log(kucing.is_warm_blooded);
+console.log(kucing.is_warm_blooded); // check attribute inheritance
 let bebek = new Bird('bebek');
-console.log(bebek.is_warm_blooded);
-bebek.eats();
-bebek.setNumLegs(2);
-console.log(bebek.num_legs);
+console.log(bebek.is_warm_blooded); // check attribute inheritance
+bebek.eats();                       // check method inheritance
+bebek.setNumLegs(2);                // set new number of legs
+console.log(bebek.num_legs);        // check if the number of the legs is corrected
+// check the super powers
 kucing.super_power.use_laser_vision();
 bebek.super_power.be_invisible();
