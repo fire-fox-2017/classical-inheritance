@@ -29,11 +29,11 @@ class SuperPower{
   }
 
 eat(){
-  console.log(`${this.Name} took some time to eat! Health + 20 / turn for 2 turns`)
+  console.log(`Health + 20 / turn for 2 turns`)
 }
 
 Might(){
-  console.log (`${this.Name} use MIGHT!! ATK + 50%`)
+  console.log (`ATK + 50%`)
   }
 }
 
