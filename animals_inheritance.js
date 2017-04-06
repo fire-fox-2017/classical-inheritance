@@ -17,9 +17,13 @@ class Animals{
       if(components.hasOwnProperty("Def")){
         this.Def = components ["Def"]}
 
-    this.Spd = 0;
+    this.Spd = 2;
       if(components.hasOwnProperty("Spd")){
         this.Spd = components ["Spd"]}
+
+    this.num_leg = 2;
+      if(components.hasOwnProperty("num_leg")){
+        this.num_leg = components ["num_leg"]}
       }
   }
 
@@ -32,7 +36,7 @@ eat(){
   console.log(`Health + 20 / turn for 2 turns`)
 }
 
-Might(){
+static Might(){
   console.log (`ATK + 50%`)
   }
 }
@@ -64,7 +68,7 @@ class frog extends Animals {
   }
 
 poison(){
-  console.log("FROG USE POISON!! all enemy animals are poisoned (-10 hp / turn")
+  console.log("FROG USE POISON!! all enemy animals are poisoned -10 hp / turn")
   }
 }
 
@@ -78,18 +82,17 @@ wall(){
   console.log("Elephant took a defensive state! all enemies attacks are blocked for 1 turn")
   }
 }
-var Dog = new dog({Name: "Dog", Health: 70, Atk: 25, Def: 30, Spd: 20 });
+var Dog = new dog({Name: "Dog", Health: 70, Atk: 25, Def: 30, num_leg: 4});
 var Bat = new bat({Name: "Bat", Health: 45, Atk: 5, Def: 10, Spd: 100 });
 var Frog = new frog({Name: "Frog", Health: 60, Atk: 15, Def: 5, Spd: 60 });
 var Elephant = new elephant({Name: "Elephant", Health: 150, Atk: 5, Def: 80, Spd: 5 });
 
 console.log(Dog)
-Dog.bite()
+/*Dog.bite()
 console.log(Bat)
 Bat.agility()
 console.log(Frog)
 Frog.poison()
 console.log(Elephant)
 Elephant.wall()
-Dog.superpower.Might();
-Elephant.superpower.eat();
+Elephant.superpower.eat();*/
