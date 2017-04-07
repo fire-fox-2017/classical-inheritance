@@ -1,7 +1,9 @@
 "use strict"
 class Animal {
-    constructor(name) {
+    constructor(name, leg, blood) {
         this.newName = name
+        this._leg = 2
+        this._blood = "warm"
     }
 
     doSomething() {
@@ -23,15 +25,16 @@ class SuperPower {
 
 class Frog extends Animal {
     constructor(name, leg, blood) {
-        super(name)
-        this._name = name
+        super(name, blood)
+        // this._name = name
         this._leg = leg
-        this._blood = blood
+        // this._blood = blood
         this._superpower = new SuperPower()
     }
 
     doSomething() {
         super.doSomething();
+        // this._leg = 4
         console.log(`I have ${this._leg} legs.`)
     }
 
@@ -49,9 +52,9 @@ frog._superpower.use_laser_vision()
 
 class Bat extends Animal {
     constructor(name, leg, blood) {
-        super(name)
-        this._leg = leg
-        this._blood = blood
+        super(name, leg, blood)
+        // this._leg = leg
+        // this._blood = blood
         this._superpower = new SuperPower()
     }
 
@@ -74,9 +77,9 @@ bat._superpower.use_laser_vision()
 
 class Chimpanzee extends Animal {
     constructor(name, leg, blood) {
-        super(name)
-        this._leg = leg
-        this._blood = blood
+        super(name, leg, blood)
+        // this._leg = leg
+        // this._blood = blood
         this._superpower = new SuperPower()
     }
 
@@ -99,9 +102,9 @@ chimpanzee._superpower.use_laser_vision()
 
 class Fox extends Animal {
     constructor(name, leg, blood) {
-        super(name)
-        this._leg = leg
-        this._blood = blood
+        super(name, leg, blood)
+        // this._leg = leg
+        // this._blood = blood
         this._superpower = new SuperPower()
     }
 
