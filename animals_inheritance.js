@@ -35,9 +35,9 @@ class Chicken extends Animal {
   }
 }
 
-class SuperPower extends Animal {
+class SuperPower {
   constructor(name) {
-    super(name);
+    this.name = name;
   }
 
   laserVision() {
@@ -59,8 +59,10 @@ class SuperPower extends Animal {
 
 let myChicken = new Chicken('Ayam');
 let myChimp = new Chimpanzee('Simpanse');
-let myFrog = new Frog('Kodok');
+let myFrog = new Frog('Kodok', 4);
 let myDuck = new Duck('Bebek');
+
+console.log(myFrog)
 
 myChicken.superPower.laserVision();
 myChimp.superPower.bigSize();
